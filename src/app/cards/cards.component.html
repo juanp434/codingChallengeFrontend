@@ -1,0 +1,12 @@
+<div class="cards-container">
+
+  <h2 class="title">LANGUAGES & TECHNOLOGIES</h2>
+  
+  <li class="card" id="{{card.cardId}}" *ngFor="let card of cards">
+    <img src="{{card.cardImageUrl}}" alt="{{card.cardTitle}}" class="image">
+    <div class="card-description">
+      <p>{{card.cardDescription}}</p>
+    </div>
+  </li>
+
+</div>

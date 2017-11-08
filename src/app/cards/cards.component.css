@@ -1,0 +1,47 @@
+li{
+    list-style: none;
+}
+.title{
+    margin-left: 30px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #020202;
+}
+.cards-container{
+    height:91vh;
+    margin-left: 300px;
+    background: aliceblue;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.card{
+    width: 325px;
+    margin: 30px;
+    background: white;
+    display: inline-block;
+    vertical-align: top;
+}
+.image {
+    width: 325px;
+    height: 183px;
+    
+  }
+
+.card-description{
+    margin: 33px;
+    
+}
+.card-description p{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #313131;
+}

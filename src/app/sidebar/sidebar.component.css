@@ -1,0 +1,64 @@
+.sidebar{
+    position: absolute;
+    background: black;
+    width: 300px;
+    height: calc(100% - 60px);
+}
+
+.dev-info{
+    color: white;
+    height: 135px;
+    width: 300px;
+    background: #333333;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    
+}
+
+.dev-name {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 30px;
+}
+
+.dev-dni, .dev-years{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.sidebar-container{
+    margin: 50px 30px;
+}
+
+.filter-title{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #f8f8f8;
+}
+
+.radio-group{
+    color: white;
+    display: inline-flex;
+    flex-direction: column;
+}
+.example-radio-button{
+    margin: 10px;
+}
+
