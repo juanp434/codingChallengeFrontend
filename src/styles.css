@@ -12,6 +12,10 @@ app-sidebar{
    color:  rgba(255,255,255,.7) !important;
 }
 
+div{
+    box-sizing: border-box;
+}
+
 /*
 .mat-radio-outer-circle{
     width: 30px;

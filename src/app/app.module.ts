@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 import {MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
@@ -41,6 +42,13 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { CardsService } from './cards.service';
 import { HttpModule } from '@angular/http';
 import { CardsComponent } from './cards/cards.component';
+import { CardDetailComponent } from './card-detail/card-detail.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: CardsComponent },
+  { path: 'card-detail', component: CardDetailComponent },
+];
 
 @NgModule({
   exports: [
@@ -76,7 +84,7 @@ import { CardsComponent } from './cards/cards.component';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-  ]
+  ],
 }) 
 export class AppMaterialModule {}
 
@@ -85,7 +93,8 @@ export class AppMaterialModule {}
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    CardsComponent
+    CardsComponent,
+    CardDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -93,7 +102,8 @@ export class AppMaterialModule {}
     FormsModule,
     AppMaterialModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [CardsService],
   bootstrap: [AppComponent],
