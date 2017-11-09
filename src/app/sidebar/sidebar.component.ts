@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { CardsService } from '../cards.service';
 
@@ -9,10 +9,18 @@ import { CardsService } from '../cards.service';
 })
 export class SidebarComponent implements OnInit {
   cards : any;
+  filter: string;
+  radio: string;
   constructor(private cardService: CardsService) { }
 
+  @Output() searchFilterEvent = new EventEmitter<string>();
+
+  sendFilter(){
+    this.searchFilterEvent.emit(this.filter);
+  }
+  
   ngOnInit() {
-    //this.cards = this.cardService.getAllCards();
+    
   }
 
 

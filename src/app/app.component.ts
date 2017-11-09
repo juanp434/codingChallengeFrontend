@@ -9,5 +9,11 @@ import 'hammerjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  filter: string;
+
+  reciveFilter($event){  //recive data from sidebarComponent and send it to cardsComponent
+    this.filter = $event;
+    console.log(this.filter);
+  }
   
 }
