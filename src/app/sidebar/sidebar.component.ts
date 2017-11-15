@@ -1,6 +1,8 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { CardsService } from '../cards.service';
+import { DashboardDataService } from '../services/dashboard-data.service';
+import {Observable} from 'rxjs/Observable';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,17 +13,14 @@ export class SidebarComponent implements OnInit {
   cards : any;
   filter: string;
   radio: string;
-  constructor(private cardService: CardsService) { }
+  subscription: Subscription;
+  click: boolean = true;
 
-  @Output() searchFilterEvent = new EventEmitter<string>();
-
-  sendFilter(){
-    this.searchFilterEvent.emit(this.filter);
+  constructor(private data : DashboardDataService) { 
+    this.subscription = this.data.getClicked().subscribe(click => { this.click = click;});
   }
-  
+
   ngOnInit() {
-    
   }
-
 
 }

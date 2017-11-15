@@ -39,10 +39,12 @@ import {CdkTableModule} from '@angular/cdk/table';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { CardsService } from './cards.service';
 import { HttpModule } from '@angular/http';
 import { CardsComponent } from './cards/cards.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
+
+import { CardsService } from './services/cards.service';
+import { DashboardDataService } from './services/dashboard-data.service';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -105,7 +107,7 @@ export class AppMaterialModule {}
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [CardsService],
+  providers: [CardsService, DashboardDataService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

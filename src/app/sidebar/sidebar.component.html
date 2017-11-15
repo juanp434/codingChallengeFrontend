@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar" [ngClass]="click ? 'fade-in':'fade-out'">
   <div class="dev-info">
     <div class="dev-name">JUAN PABLO SUBIROS</div>
     <div class="dev-dni">DNI 35410512</div>
@@ -13,20 +13,20 @@
     </div>
   
     <div>
-      <h4 class="filter-title">Filter by</h4>
+      <h4 class="filter-title" >Filter by</h4>
   
       <mat-radio-group class="example-radio-group radio-group">
-        <mat-radio-button class="example-radio-button" [(ngModel)]="radio" value="1" name="radio" id="radio1" checked="true">
+        <mat-radio-button class="example-radio-button" value="1" name="radio" id="radio1" checked="true">
           Frontend
         </mat-radio-button>
   
-        <mat-radio-button class="example-radio-button" value="2" name="radio" id="radio2">
+        <mat-radio-button class="example-radio-button" value="2" name="radio" id="radio2" >
           Backend
         </mat-radio-button>
       </mat-radio-group>
       
     </div>
-    
+
   </div>
   
 </div>

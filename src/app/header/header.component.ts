@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { DashboardDataService } from '../services/dashboard-data.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   logo: String;
-
-  constructor() {
+  
+  constructor(private data : DashboardDataService) {
     this.logo = "../../assets/avalith.png";
    }
 
   ngOnInit() {
+  }
+
+  clicked(){
+   this.data.setClicked();
   }
 
 }

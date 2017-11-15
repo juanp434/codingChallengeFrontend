@@ -4,6 +4,14 @@
     width: 300px;
     height: calc(100% - 60px);
 }
+.fade-in{
+    left:0;
+    transition: ease-in .5s;
+}
+.fade-out{
+    left: -300px;
+    transition: ease-out .5s;
+}
 
 .dev-info{
     color: white;

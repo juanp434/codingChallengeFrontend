@@ -13,10 +13,17 @@ li{
 }
 .cards-container{
     height:91vh;
-    margin-left: 300px;
     background: aliceblue;
     overflow: scroll;
     overflow-x: hidden;
+}
+.withML{
+    margin-left: 300px;
+    transition: ease-in .5s;
+}
+.withoutML{
+    margin-left: 0px;
+    transition: ease-out .5s;
 }
 
 .card{
